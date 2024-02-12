@@ -1,0 +1,92 @@
+<html>
+<body>
+<form action="{{url_for('predict_datapoint')}}" method="POST">
+    <div class="form-group">
+         <label for="ssc_p">ssc_p:</label>
+         <input type="text" id="ssc_p" name="ssc_p" placeholder="Enter ssc_p value(float)">
+    </div>
+
+    <div class="form-group">
+         <label for="hsc_p">hsc_p:</label>
+         <input type="text" id="hsc_p" name="hsc_p" placeholder="Enter hsc_p value(float)">
+    </div>
+
+    <div class="form-group">  
+         <label for="degree_p">degree_p:</label>
+         <input type="text" id="degree_p" name="degree_p" placeholder="Enter degree_p value(float)">
+    </div>
+    
+    <div class="form-group">
+         <label for="etest_p"> etest_p:</label>
+         <input type="text" id="etest_p" name="etest_p" placeholder="Enter etest_p value(float)">
+    </div>
+  
+    <div class="form-group">
+         <label for="mba_p"> mba_p:</label>
+         <input type="text" id="mba_p" name="mba_p" placeholder="Enter mba_p value(float)">
+    </div>
+  
+<div class="form-group">
+    <label for=" gender"> gender:</label>
+    <select id=" gender" name=" gender">
+     <option value="M">M</option>
+     <option value="F">F</option>
+    </select>
+</div>
+  
+<div class="form-group">
+    <label for="ssc_b">ssc_b:</label>
+    <select id="ssc_b" name="ssc_b">
+     <option value="Others">Others</option>
+     <option value="Central">Central</option>
+    </select>
+</div>
+
+<div class="form-group">
+    <label for="hsc_b">hsc_b:</label>
+    <select id="hsc_b" name="hsc_b">
+     <option value="Others">Others</option>
+     <option value="Central">Central</option>
+    </select>
+</div>
+
+<div class="form-group">
+    <label for="hsc_s">hsc_s:</label>
+    <select id="hsc_s" name="hsc_s">
+      <option value="Commerce">Commerce</option>
+      <option value="Science">Science</option>
+      <option value="Arts">Arts</option>
+    </select>
+  </div>
+
+<div class="form-group">
+    <label for="degree_t">degree_t:</label>
+    <select id="degree_t" name="degree_t">
+      <option value="Sci&Tech">Sci&Tech</option>
+      <option value="Comm&Mgmt">Comm&Mgmt</option>
+      <option value="Others">Others</option>
+    </select>
+</div>
+
+<div class="form-group">
+    <label for="workex">workex:</label>
+    <select id="workex" name="workex">
+      <option value="No">No</option>
+      <option value="Yes">Yes</option>
+    </select>
+</div>
+     
+
+<div class="form-group">
+    <label for="specialisation">specialisation:</label>
+    <select id="specialisation" name="specialisation">
+        <option value="Mkt&HR">Mkt&HR</option>
+        <option value="Mkt&Fin">Mkt&Fin</option>
+    </select>
+</div>
+
+<div style="clear:both;"></div>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
