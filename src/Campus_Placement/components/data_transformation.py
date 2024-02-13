@@ -47,8 +47,8 @@ class DataTransformation:
             ## Numerical Pipeline
             num_pipeline=Pipeline(
                 steps=[
-                ('imputer',SimpleImputer(strategy="median"))
-                ('scaler',StandardScaler())
+                ('imputer',SimpleImputer(strategy="median")),
+                ('scaler',StandardScaler(with_mean=False))
 
                 ]
 
@@ -64,7 +64,7 @@ class DataTransformation:
                                                              degree_t_categories,
                                                              workex_categories,
                                                              specialisation_categories],handle_unknown="ignore")),
-                ('scaler',StandardScaler())
+                ('scaler',StandardScaler(with_mean= False))
                 ]
 
             )
@@ -75,7 +75,6 @@ class DataTransformation:
               transformers= [
             ('num_pipeline',num_pipeline,numerical_cols),
             ('cat_pipeline',cat_pipeline,categorical_cols)
-            
             ]
         )
             
