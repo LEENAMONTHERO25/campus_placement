@@ -29,7 +29,8 @@ class ModelTrainer:
                 test_arr[:,:-1],
                 test_arr[:,-1]
             )
-
+        
+        
             models={
              "Logistic Regression": LogisticRegression(),
              "RandomForestClassifier":RandomForestClassifier(n_estimators =14,
@@ -62,5 +63,6 @@ class ModelTrainer:
           
 
         except Exception as e:
+        
             logging.info('Exception occured at Model Training')
             raise customexception(e,sys)
