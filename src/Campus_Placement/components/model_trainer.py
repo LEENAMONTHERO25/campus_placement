@@ -4,6 +4,7 @@ import os
 import sys
 from src.Campus_Placement.logger import logging
 from src.Campus_Placement.exception import customexception
+from sklearn.metrics import accuracy_score,precision_score, recall_score, f1_score, roc_auc_score
 from dataclasses import dataclass
 from src.Campus_Placement.utils.utils import save_object
 from src.Campus_Placement.utils.utils import evaluate_model
@@ -60,6 +61,17 @@ class ModelTrainer:
                  file_path=self.model_trainer_config.trained_model_file_path,
                  obj=best_model
             )
+            predicted=best_model.predict(X_test)
+            accuracy= accuracy_score(y_test, predicted)
+            precision=precision_score(y_test, predicted, pos_label='Placed')
+            recall=recall_score(y_test, predicted,pos_label='Placed')
+            f1=f1_score(y_test, predicted, pos_label='Placed')
+           
+            return  accuracy,precision,recall, f1
+
+        
+            
+
           
 
         except Exception as e:
